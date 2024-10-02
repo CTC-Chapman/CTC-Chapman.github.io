@@ -1,0 +1,254 @@
+body {
+    margin: 0;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Base styles for background image on larger screens */
+.first-section {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('images/Team.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Responsive adjustments for smaller screens (mobile devices) */
+@media only screen and (max-width: 768px) {
+    .first-section {
+        background-size: 200vw; /* Ensure the entire image is visible */
+        background-position: center center; /* Keep the image centered */
+        height: auto; /* Allow the section height to adjust based on content */
+        min-height: 100vh; /* Ensure it still takes up at least the full viewport height */
+    }
+}
+
+
+/* Ensure the rest of the content has a white background */
+.content-wrapper {
+    background-color: white;
+    padding: 20px;
+}
+
+.small-logo {
+    width: 12vi; /* Set the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    padding-bottom: 1vi;
+}
+
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Logo styling */
+header .logo {
+    position: absolute;
+    left: 2rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #737373;
+}
+
+/* Make the logo smaller */
+.logo img {
+    width: 11vi; /* Adjust as needed */
+    height: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #ffffff;
+}
+
+footer p {
+    margin: 0;
+}
+
+ion-icon{
+    font-size:450%;
+    color: #000000;
+}
+
+.words {
+    width: 100%;
+    overflow: hidden; 
+    position: relative;
+    /* font-size: 6rem; */
+    font-size: 6vw;
+}
+
+.words h1 {
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 100%;
+    animation: word-animation 250s linear infinite;
+}
+
+@keyframes word-animation {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.our-purpose {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.our-purpose h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #35443d; /* Adjust this color for better readability */
+    margin-bottom: 20px;
+}
+
+.our-purpose p {
+    font-size: 1.5rem;
+    color: #35443d;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.purpose-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.purpose-details img {
+    max-width: 30vi;
+    max-height: 15vi;
+    border-radius: 10px;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+.purpose-details p {
+    font-size: 1.2rem;
+    color: #35443d;
+    max-width: 500px;
+}
+
+
+.contact-section {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 40px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+}
+
+.contact-section p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 2px;
+    border-color: #000000;
+    border-width: 1px;
+    font-size: 1.1rem;
+    color: #000000;
+}
+
+.contact-form button {
+    padding: 15px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #5289ff;
+    color: white;
+}
+
+input, textarea {
+    background: rgba(255, 255, 255, 0.5);
+    color: #fff;
+}
+
+textarea {
+    resize: none;
+}
+
+.about-section, .mission-section {
+    padding: 60px 20px;
+    max-width: 80vw;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.about-section h1 {
+    /* Set the background to the gradient */
+    background: linear-gradient(45deg, hwb(188 37% 6%), rgb(197, 125, 242));
+    /* Use background-clip to apply the gradient to the text */
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* Set the text color to transparent to show the gradient */
+    color: transparent;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+    font-size: 2rem;
+}
+
+
+.about-section p {
+    padding: 20px;
+    font-size: 1.2rem;
+    color: #333;
+    text-align: center;
+    line-height: 1.8;
+}

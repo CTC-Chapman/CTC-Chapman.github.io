@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/bestctc.png" alt="Logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="meet-the-team.html">Meet the team</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="contact-section">
+        <h2>CONTACT</h2>
+        <p>Want us to code you a website? Reach out!</p>
+        <p>Email: <a href="mailto:ctc@chapman.edu">ctc@chapman.edu</a></p>
+
+        <form action="contact.php" method="POST" class="contact-form">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="subject" placeholder="Subject" required>
+            <textarea name="message" placeholder="Message" required></textarea>
+            <button type="submit">SEND MESSAGE</button>
+        </form>
+    </section>
+
+    <footer>
+        <tr>
+            <td>
+                <a href="index.html">
+                    <img src="images/bestctc.png" alt="Logo" class="small-logo">
+                </a>
+            </td>
+            <td>
+                <p>
+                    <a href="https://www.linkedin.com/company/codethechangechapmanuniveristy/mycompany/?viewAsMember=true"><ion-icon name="logo-linkedin"></ion-icon></a>
+                    <a href="https://www.instagram.com/codethechange.chapman/"><ion-icon name="logo-instagram"></ion-icon></a>
+                </p>
+            </td>
+        </tr>
+    </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
